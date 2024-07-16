@@ -38,16 +38,34 @@ input.addEventListener('change', () => {
 
     const bufferDataArr = new Uint8Array(bufferDataLength);
 
+    const barWidth = canvas.height/bufferDataLength;
+    let x = 0;
+    // Define the gradient for the sound bar
+const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+gradient.addColorStop(0, '#ff7e5f'); // Start with a vibrant color
+gradient.addColorStop(1, '#feb47b'); // End with another vibrant color
+    
+
     function drawAndAnimateSoundBar(){
+        x=0;
+        context.clearRect(0,0,canvas.width,canvas.height);
+
         analyser.getByteFrequencyData(bufferDataArr);
         bufferDataArr.forEach(dataValue => {
+            const barHeight = dataValue;
+
+            context.fillStyle = gradient;
+            context.fillRect(x,canvas.height-barHeight,barWidth,barHeight);
+            x+=barWidth;
 
         })
 
     }
 
 
-    
+    setInterval(() =>{
+        drawAndAnimateSoundBar();
+    },500);
 
     
 })
