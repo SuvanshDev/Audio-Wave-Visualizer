@@ -35,5 +35,5 @@ Alternatively, you can use a local server for a better development experience.
 
 📬 Contact
 For any questions or feedback, please reach out:
-Email: suvanshg960@gmail.com
-GitHub: SuvanshDev
+- Email: suvanshg960@gmail.com
+- GitHub: SuvanshDev
