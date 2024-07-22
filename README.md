@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-=======
-
-Creating a visually appealing README for your GitHub project can significantly enhance its attractiveness and usability. Here’s a structured README template for your Audio Wave Visualizer project, including icons and sections:
-
->>>>>>> e1618fa3e6fbd156c66d22b60921d0c99433320c
 🎵 Audio Wave Visualizer
+
 Welcome to the Audio Wave Visualizer! This project provides a captivating way to visualize audio files in real-time using HTML5, CSS, and JavaScript. Experience dynamic waveform representations and interact with your music like never before.
 
 📂 Table of Contents
-Features
-Installation
-Usage
-Technologies
-Contact
+- Features
+- Installation
+- Usage
+- Technologies
+- Contact
 
 ✨ Features
-Upload and visualize audio files in real-time.
-Dynamic waveform representation with bars.
+- Upload and visualize audio files in real-time.
+- Dynamic waveform representation with bars.
 
 🚀 Installation
 To get started with the Audio Wave Visualizer, follow these steps:
@@ -33,17 +28,12 @@ Alternatively, you can use a local server for a better development experience.
 3. The waveform visualization will automatically start playing and updating in real-time.
 
 🔧 Technologies
--> HTML5: Structure and semantics.
--> CSS3: Styling and layout.
--> JavaScript: Interactive audio visualization.
--> Web Audio API: Real-time audio processing.
+- HTML5: Structure and semantics.
+- CSS3: Styling and layout.
+- JavaScript: Interactive audio visualization.
+- Web Audio API: Real-time audio processing.
 
 📬 Contact
 For any questions or feedback, please reach out:
-
 Email: suvanshg960@gmail.com
-<<<<<<< HEAD
 GitHub: SuvanshDev
-=======
-GitHub: SuvanshDev
->>>>>>> e1618fa3e6fbd156c66d22b60921d0c99433320c
