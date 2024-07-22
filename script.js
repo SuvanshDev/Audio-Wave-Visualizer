@@ -8,7 +8,7 @@ canvas.width = window.innerWidth;
 
 input.addEventListener('change', () => {
     const file = input.files[0];
-    if(!file) return;
+    if (!file) return;
 
     // turning raw audio to URL source
     audioElem.src = URL.createObjectURL(file);
@@ -19,7 +19,7 @@ input.addEventListener('change', () => {
     // 2. Create audio source
     // 3. Create audio effects (AnalyserNode)
     // 4. Create audio destination
-    
+
     // Audio Context Processing Graph
     const audioContext = new AudioContext();
 
@@ -38,34 +38,22 @@ input.addEventListener('change', () => {
 
     const bufferDataArr = new Uint8Array(bufferDataLength);
 
-    const barWidth = canvas.height/bufferDataLength;
+    const barWidth = canvas.height / bufferDataLength;
     let x = 0;
-    // Define the gradient for the sound bar
-const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
-gradient.addColorStop(0, '#ff7e5f'); // Start with a vibrant color
-gradient.addColorStop(1, '#feb47b'); // End with another vibrant color
-    
-
-    function drawAndAnimateSoundBar(){
-        x=0;
-        context.clearRect(0,0,canvas.width,canvas.height);
+    function drawAndAnimateSoundBars() {
+        x = 0;
+        context.clearRect(0, 0, canvas.width, canvas.height);
 
         analyser.getByteFrequencyData(bufferDataArr);
         bufferDataArr.forEach(dataValue => {
             const barHeight = dataValue;
 
-            context.fillStyle = gradient;
-            context.fillRect(x,canvas.height-barHeight,barWidth,barHeight);
-            x+=barWidth;
-
+            context.fillStyle = '#32CD32';
+            context.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+            x += barWidth;
         })
+        if (!audioElem.ended) requestAnimationFrame(drawAndAnimateSoundBars);
 
     }
-
-
-    setInterval(() =>{
-        drawAndAnimateSoundBar();
-    },500);
-
-    
+    drawAndAnimateSoundBars();
 })
