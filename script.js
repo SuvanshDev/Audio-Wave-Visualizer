@@ -47,7 +47,7 @@ input.addEventListener('change', () => {
         analyser.getByteFrequencyData(bufferDataArr);
         bufferDataArr.forEach(dataValue => {
             const barHeight = dataValue;
-
+            var colour = 2;
             context.fillStyle = '#32CD32';
             context.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
             x += barWidth;
