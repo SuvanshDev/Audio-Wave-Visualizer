@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-🎵 Audio Wave Visualizer Project
-=======
-<<<<<<< HEAD
-# Audio-Wave-Visualizer
-=======
 🎵 Audio Wave Visualizer
->>>>>>> main
 
 Welcome to the Audio Wave Visualizer! This project provides a captivating way to visualize audio files in real-time using HTML5, CSS, and JavaScript. Experience dynamic waveform representations and interact with your music like never before.
 
@@ -44,8 +37,4 @@ Alternatively, you can use a local server for a better development experience.
 For any questions or feedback, please reach out:
 - Email: suvanshg960@gmail.com
 - GitHub: SuvanshDev
-<<<<<<< HEAD
 - Linkedin: https://www.linkedin.com/in/suvansh-gupta-0b0a68187/
-=======
->>>>>>> master
->>>>>>> main
