@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Bars Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            background-color: #242124;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .inputContainer {
+            height: 3rem;
+            padding: 20px;
+            width: 10rem;
+            position: absolute;
+            border-radius: 2rem;
+            top: 3rem;
+            left: calc((100% - 10rem) / 2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #5b0ca1;
+            color: white;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Audio Waveform Visualizer</h1>
+    <div class="inputContainer">
+        Upload Audio
+        <input type="file" accept="audio/*">
+    </div>
+    <audio></audio>
+    <canvas></canvas>
+    <script src="./script.js"></script>
+</body>
+
+</html>
